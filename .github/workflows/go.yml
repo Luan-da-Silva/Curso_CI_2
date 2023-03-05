@@ -13,9 +13,9 @@ jobs:
     env:
       HOST: localhost
       PORT: 5432
-      USER: root
-      PASSWORD: root
-      DBNAME: root
+      USER: ${{ secrets.DB_USER }}
+      PASSWORD: ${{ secrets.DB_PASSWORD }}
+      DBNAME: ${{ secrets.DB_NAME }}
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
